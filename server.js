@@ -7,10 +7,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const data = require('./data')
+// const data = require('./data')
 const PORT = 4000
 
-console.log(data)
 
 const app = express();
 
@@ -21,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // routes
-app.use('/see', require('./routes/seeRouter'))
+app.use('/sse', require('./routes/sseRouter'))
 
 // PORT/listen
 app.listen(PORT, ()=>console.log(`listening on port ${PORT}`))
