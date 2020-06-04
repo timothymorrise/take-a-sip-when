@@ -5,10 +5,12 @@
 import React from 'react'
 
 // component
-function RoomContainer() {
+const RoomContainer = () => {
     return (
         <div>
-            RARrRRRr
+            <button >
+                GENERATE UNIQUE ID
+            </button>
         </div>
     )
 }
